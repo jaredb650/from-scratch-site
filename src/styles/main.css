@@ -142,7 +142,6 @@ a, button { touch-action: manipulation; }
 .btn--red { box-shadow: 0 0 0 1px rgba(229, 36, 36, .45) inset; }
 .btn--lg { min-height: 60px; padding: 0 28px; font-size: 15px; }
 .btn--sm { min-height: 40px; padding: 0 16px; font-size: 13px; letter-spacing: .18em; }
-.btn--ink { background: #000; --tk: rgba(255, 255, 255, .45); }
 .btn--line { background: transparent; box-shadow: inset 0 0 0 1px var(--line-strong); --tk: rgba(255, 255, 255, .5); }
 @media (max-width: 480px) {
   .btn { max-width: 100%; white-space: normal; text-align: center; line-height: 1.15; padding-block: 10px; }
@@ -151,7 +150,6 @@ a, button { touch-action: manipulation; }
 .btn__sub { font: 400 14px/1 var(--body); letter-spacing: 0; text-transform: none; color: rgba(255, 255, 255, .78); }
 @media (hover: hover) and (pointer: fine) {
   .btn--red:hover { background: var(--red-hover); }
-  .btn--ink:hover { background: #160000; }
   .btn--line:hover { background: var(--red); box-shadow: inset 0 0 0 1px rgba(229, 36, 36, .45); }
 }
 
@@ -207,7 +205,7 @@ a, button { touch-action: manipulation; }
   .obi {
     inset: 0 0 auto 0; height: calc(var(--bar) + env(safe-area-inset-top, 0px));
     padding: env(safe-area-inset-top, 0px) 10px 0 10px; gap: 12px;
-    border-bottom: 1px solid #000;
+    background: #000; border-bottom: 2px solid var(--red);
   }
   .obi__icon { width: 38px; height: 38px; }
   .obi__latin, .obi__name { display: none; }
@@ -507,13 +505,13 @@ a, button { touch-action: manipulation; }
 .vctl { position: absolute !important; left: 26px; bottom: 46px; display: flex; gap: 8px; }
 .vbtn {
   display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-width: 44px; height: 44px; padding: 0 12px;
-  background: rgba(0, 0, 0, .82); color: #fff; box-shadow: inset 0 0 0 1px var(--line-strong);
+  background: var(--red); color: #fff; box-shadow: inset 0 0 0 1px rgba(229, 36, 36, .45);
   font: 700 13px/1 var(--hud); letter-spacing: .16em; text-transform: uppercase;
   transition: background-color .18s ease, transform .16s var(--ease-out);
 }
 .vbtn:active { transform: scale(.96); }
-.vbtn[aria-pressed="true"] { background: var(--red); box-shadow: inset 0 0 0 1px rgba(229, 36, 36, .5); }
-@media (hover: hover) and (pointer: fine) { .vbtn:hover { background: #1a0000; } .vbtn[aria-pressed="true"]:hover { background: var(--red-hover); } }
+.vbtn[aria-pressed="true"] { background: var(--red-hi); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .55); }
+@media (hover: hover) and (pointer: fine) { .vbtn:hover { background: var(--red-hover); } .vbtn[aria-pressed="true"]:hover { background: #f03a3a; } }
 .vbtn .ico { width: 16px; height: 16px; }
 .cap { display: flex; align-items: center; gap: 10px; margin-top: 14px; padding-left: 4px; font: 400 14px/1.3 var(--body); color: var(--mist); }
 .cap .ico { width: 12px; height: 12px; color: var(--red-hi); }
@@ -696,13 +694,13 @@ a, button { touch-action: manipulation; }
 /* =====================================================================
    HOT SEAT
    ===================================================================== */
-.seat { background: var(--red); padding-block: clamp(64px, 7vw, 112px) clamp(80px, 9vw, 140px); position: relative; overflow: clip; }
+.seat { background: var(--deep); border-block: 2px solid var(--red); padding-block: clamp(64px, 7vw, 112px) clamp(80px, 9vw, 140px); position: relative; overflow: clip; }
 .seat__mark {
   display: flex; flex-direction: column; gap: .18em; padding-inline: var(--gut); margin-bottom: clamp(40px, 5vw, 72px);
   font: 900 clamp(38px, 10.6vw, 64px)/.9 var(--hud); text-transform: uppercase; letter-spacing: -.01em; color: #fff;
 }
 @media (min-width: 900px) { .seat__mark { font-size: clamp(64px, 6.2vw, 150px); } }
-.seat__mark .o { font-size: .5em; letter-spacing: .02em; color: rgba(0, 0, 0, .62); }
+.seat__mark .o { font-size: .5em; letter-spacing: .02em; color: var(--red-hi); }
 .seat .h2-es, .seat__copy p.es { color: rgba(255, 255, 255, .78); }
 .seat__copy p { color: #fff; }
 .seat__grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; }
@@ -772,15 +770,12 @@ a.row:active .row__big { transform: translateX(4px); }
 @media (max-width: 899px) { .fcta { display: none; } }
 
 /* =====================================================================
-   PRINT TEXTURE · GRAIN · SCANLINES  (one global layer, like the flyer)
+   GRAIN · SCANLINES  (one global layer; the creased paper texture was removed 11-04 at the user's request)
    ===================================================================== */
-/* .fx itself must NOT form a stacking context (no z-index / contain / opacity), or the blend modes below
-   would blend against an empty group and paint flat grey. Each layer is fixed on its own and blends with the page. */
+/* .fx itself must NOT form a stacking context (no z-index / contain / opacity), or the blend mode below
+   would blend against an empty group. Each layer is fixed on its own and blends with the page. */
 .fx { pointer-events: none; }
 .fx > div { position: fixed; inset: 0; z-index: 60; pointer-events: none; }
-.fx__tex, .fx__lift { background: url("/img/creased.webp") 0 0 / 1100px repeat; background-image: image-set(url("/img/creased.avif") type("image/avif"), url("/img/creased.webp") type("image/webp")); background-size: 1100px; }
-.fx__tex { mix-blend-mode: soft-light; opacity: .6; }
-.fx__lift { mix-blend-mode: screen; opacity: .06; }
 .fx__grain {
   opacity: .06; mix-blend-mode: screen;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1.4 -.35'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
