@@ -90,3 +90,12 @@ Point the `from-scratch.art` domain at the host. Nothing here creates accounts o
 - Video only autoplays muted while on screen; one player can have sound at a time.
 - The brand is the series: the chrome FS logo, the FROM SCRATCH wordmark, the obi strip. MEKA appears as the host of Vol. #001.
 - `PRODUCT.md` holds the brief and brand rules; `HANDOFF.md` is the working log.
+
+## Deploy (GitHub Pages)
+
+Live repo: https://github.com/jaredb650/from-scratch-site. Every push to `main` builds and deploys through
+`.github/workflows/deploy.yml` (Node 20, `npm ci`, `npm run build`, upload `dist/`). The custom domain comes from
+`public/CNAME` (`from-scratch.art`) and the repo's Pages settings.
+
+DNS (Cloudflare, DNS only / grey cloud): `A @` to 185.199.108.153, 185.199.109.153, 185.199.110.153 and 185.199.111.153;
+`CNAME www` to `jaredb650.github.io`. Leave the `rsvp` record alone (it points at ticketFoo).
