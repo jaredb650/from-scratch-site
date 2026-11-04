@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//FROM SCRATCH//Vol. 001//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:from-scratch-vol-001@from-scratch.art
+DTSTAMP:20261104T120000Z
+DTSTART:20261105T200000Z
+DTEND:20261106T020000Z
+SUMMARY:FROM SCRATCH Vol. #001 with MEKA
+LOCATION:Shipwreck Studios\, 202 C. San Agustín\, San Juan\, PR 00901
+DESCRIPTION:MEKA makes a hard trance track live in Ableton Live 12 from an empty project. Come and go anytime and ask anything. https://from-scratch.art
+URL:https://from-scratch.art
+END:VEVENT
+END:VCALENDAR

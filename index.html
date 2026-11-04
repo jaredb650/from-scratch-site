@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FROM SCRATCH | Open production sessions | San Juan, PR</title>
+<meta name="description" content="A community series where a producer starts a track from scratch, live, in front of whoever shows up. Vol. #001: MEKA, Thu Nov 5, 4-10 PM, Shipwreck Studios, San Juan. RSVP for three free Max for Live devices.">
+<meta name="theme-color" content="#8b0000">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="{{SITE_URL}}/">
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="FROM SCRATCH: open production sessions">
+<meta property="og:description" content="A producer starts a track from scratch, live, in front of whoever shows up. Vol. #001 with MEKA: Thu Nov 5, 4-10 PM, Shipwreck Studios, San Juan.">
+<meta property="og:url" content="{{SITE_URL}}/">
+<meta property="og:image" content="{{SITE_URL}}/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="/fonts/Orbitron.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/Outfit.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/ChonkyPixels.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/img/fs-chrome-800.avif" as="image" type="image/avif" media="(max-width: 899px)" fetchpriority="high">
+<link rel="preload" href="/img/fs-chrome-1600.avif" as="image" type="image/avif" media="(min-width: 900px)" fetchpriority="high">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicEvent",
+  "name": "FROM SCRATCH Vol. #001: MEKA",
+  "description": "An open production session. MEKA makes a hard trance track live in Ableton Live 12 from an empty project, in six hours. Come and go anytime and ask anything.",
+  "superEvent": { "@type": "EventSeries", "name": "FROM SCRATCH", "description": "A community series where a producer starts a track from scratch, live, in front of whoever shows up.", "url": "{{SITE_URL}}/" },
+  "startDate": "{{EVENT_START}}",
+  "endDate": "{{EVENT_END}}",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "location": {
+    "@type": "Place",
+    "name": "Shipwreck Studios",
+    "address": { "@type": "PostalAddress", "streetAddress": "202 C. San Agustín", "addressLocality": "San Juan", "postalCode": "00901", "addressRegion": "PR", "addressCountry": "US" }
+  },
+  "performer": { "@type": "MusicGroup", "name": "MEKA" },
+  "organizer": { "@type": "Organization", "name": "FROM SCRATCH", "url": "{{SITE_URL}}/", "sameAs": ["{{INSTAGRAM_URL}}"] },
+  "image": "{{SITE_URL}}/og.jpg",
+  "url": "{{SITE_URL}}/"
+}
+</script>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.5v15l13-7.5z" fill="currentColor"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><path d="M6.5 4.5h4v15h-4zM13.5 4.5h4v15h-4z" fill="currentColor"/></symbol>
+  <symbol id="i-sound" viewBox="0 0 24 24"><path d="M3.5 9h4l5-4.5v15l-5-4.5h-4z" fill="currentColor"/><path d="M16 8.5c1.2 1 1.8 2.2 1.8 3.5s-.6 2.5-1.8 3.5M18.6 5.8c2 1.7 3 3.8 3 6.2s-1 4.5-3 6.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/></symbol>
+  <symbol id="i-mute" viewBox="0 0 24 24"><path d="M3.5 9h4l5-4.5v15l-5-4.5h-4z" fill="currentColor"/><path d="M16 9l5.5 6M21.5 9L16 15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M3 12h16M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 3v16M6 13l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h12" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+</svg>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ============ OBI: the flyer's red strip. Desktop: fixed left rail. Phone: fixed top bar. ============ -->
+<header class="obi" id="obi">
+  <a class="obi__icon" href="#top" aria-label="FROM SCRATCH, back to top">
+    <picture><source srcset="/img/fs-mark-240.avif" type="image/avif"><img src="/img/fs-mark-240.webp" width="240" height="151" alt=""></picture>
+  </a>
+  <p class="obi__latin" aria-hidden="true">San Juan PR</p>
+  <p class="obi__name" aria-hidden="true">From Scratch</p>
+  <span class="obi__brand" aria-hidden="true"><span>From</span><span>Scratch</span></span>
+  <a class="btn btn--ink obi__rsvp" href="{{RSVP_URL}}">RSVP</a>
+  <button class="obi__menu" type="button" aria-expanded="false" aria-controls="sheet">
+    <svg class="ico" aria-hidden="true"><use href="#i-menu"/></svg><span class="vh">Menu</span>
+  </button>
+  <nav class="sheet" id="sheet" aria-label="Sections">
+    <a href="#how">How it works <span lang="es">Cómo funciona</span></a>
+    <a href="#volumes">Volumes <span lang="es">Volúmenes</span></a>
+    <a href="#hot-seat">Host a session <span lang="es">Presente una sesión</span></a>
+    <a href="#vol-001">Vol. #001 <span lang="es">Nov 5, MEKA</span></a>
+    <a href="#visit">Where and when <span lang="es">Dónde y cuándo</span></a>
+    <a class="btn btn--red" href="{{RSVP_URL}}">RSVP Vol. #001 <span lang="es">Confirme</span></a>
+  </nav>
+</header>
+
+<div class="page">
+
+<!-- desktop top banner (the flyer's header strip) -->
+<div class="banner">
+  <p class="banner__meta"><i class="dash"></i><span>Open production sessions</span> <span class="banner__es" lang="es">Sesiones de producción abiertas</span></p>
+  <nav class="banner__nav" aria-label="Sections">
+    <a href="#how">How it works</a>
+    <a href="#volumes">Volumes</a>
+    <a href="#hot-seat">Host a session</a>
+    <a href="#vol-001">Vol. #001</a>
+    <a class="btn btn--red btn--sm" href="{{RSVP_URL}}">RSVP Vol. #001</a>
+  </nav>
+</div>
+
+<main id="main">
+
+<!-- ============ HERO: the series. The name split to the corners, the chrome FS between. ============ -->
+<section class="hero" id="top" aria-labelledby="hero-title">
+  <div class="hero__art" aria-hidden="true">
+    <picture class="hero__tribal">
+      <source srcset="/img/tribal-700.avif 700w, /img/tribal-1100.avif 1100w" sizes="(min-width: 900px) 78vw, 150vw" type="image/avif">
+      <img src="/img/tribal-1100.webp" srcset="/img/tribal-700.webp 700w, /img/tribal-1100.webp 1100w" sizes="(min-width: 900px) 78vw, 150vw" width="1100" height="1100" alt="">
+    </picture>
+  </div>
+
+  <h1 class="hero__title" id="hero-title">
+    <span class="hero__from" data-split>From</span>
+    <span class="hero__scratch" data-split>Scratch</span>
+    <span class="vh">: open production sessions</span>
+  </h1>
+
+  <div class="hero__logo chrome" aria-hidden="true">
+    <picture><source srcset="/img/fs-chrome-800.avif 800w, /img/fs-chrome-1600.avif 1600w" sizes="(min-width: 900px) 46vw, 92vw" type="image/avif"><img src="/img/fs-chrome-1600.webp" srcset="/img/fs-chrome-800.webp 800w, /img/fs-chrome-1600.webp 1600w" sizes="(min-width: 900px) 46vw, 92vw" width="1600" height="899" alt="" fetchpriority="high"></picture>
+    <span class="hero__vol"><i></i>Open sessions<i></i></span>
+  </div>
+
+  <div class="hero__badge" aria-hidden="true">
+    <span lang="es">En vivo</span>
+    <strong>6<em>hrs</em></strong>
+    <span>Live</span>
+  </div>
+
+  <div class="hero__intro">
+    <p class="hero__lede">A community series where a producer starts a track from scratch, live, in front of whoever shows&nbsp;up.</p>
+    <p class="hero__lede-es" lang="es">Una serie comunitaria donde un productor empieza un tema desde cero, en vivo, frente a quien&nbsp;llegue.</p>
+  </div>
+
+  <div class="hero__when">
+    <p class="next"><i class="dash"></i><span>Next session: <b>Vol. #001</b> with MEKA</span> <span class="next__es" lang="es">Próxima sesión: Vol. #001 con MEKA</span></p>
+    <p class="when">
+      <span class="when__day"><span lang="es">Jue</span><span>Thu</span></span>
+      <span class="when__date">Nov 5</span>
+      <i class="when__sep" aria-hidden="true"></i>
+      <span class="when__time">4-10 PM</span>
+    </p>
+    <p class="hero__where"><b>Shipwreck Studios</b> 202 C. San Agustín, San Juan</p>
+    <p class="hero__clock" data-clock="short" aria-live="off">Thursday, 4 PM to 10 PM. Come and go anytime.</p>
+    <div class="hero__actions">
+      <a class="btn btn--red btn--lg" href="{{RSVP_URL}}">RSVP Vol. #001 <span class="btn__sub">+ 3 free devices</span></a>
+      <a class="link" href="#how">How it works <svg class="ico" aria-hidden="true"><use href="#i-down"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW: what the series is ============ -->
+<section class="session sec" id="how" aria-labelledby="how-title">
+  <div class="wrap">
+    <header class="sec-head" data-rise>
+      <h2 class="h2" id="how-title">What is From&nbsp;Scratch?</h2>
+      <p class="h2-es" lang="es">¿Qué es From Scratch?</p>
+    </header>
+
+    <div class="session__lead" data-rise>
+      <p class="statement">From Scratch is a series of open production sessions. A producer starts a track from an empty project and takes it as far as they can in six hours, in front of an audience, without hiding any part of the process.</p>
+      <p class="statement-es" lang="es">From Scratch es una serie de sesiones de producción abiertas a todos. Un productor empieza un tema desde un proyecto en blanco y trata de llevarlo lo más lejos posible en seis horas, frente a la audiencia y sin esconder nada del proceso.</p>
+    </div>
+
+    <div class="points">
+      <article class="point" data-rise>
+        <h3 class="h3"><i class="dash"></i>The audience <span lang="es">La audiencia</span></h3>
+        <p>Come and go anytime. Stop the artist to ask what they just did, why, or how; that's what they're there for. Suggest ideas, bring a laptop and follow along, or meet other producers. It's laid back, not a classroom.</p>
+        <p class="es" lang="es">Entre y salga cuando guste. Interrumpa al artista para preguntar qué hizo, por qué o cómo; para eso está ahí. Puede sugerir ideas, traer su laptop para seguir el proceso o conocer a otros productores. No es una clase y el ambiente es relajado.</p>
+      </article>
+      <article class="point" data-rise>
+        <h3 class="h3"><i class="dash"></i>The artist <span lang="es">El artista</span></h3>
+        <p>There's no presentation and no plan. The artist produces live, usually from an 8-bar loop into the arrangement if time allows. If an idea isn't working, they can start over. If the audience spends all six hours asking questions, that counts too.</p>
+        <p class="es" lang="es">No hay presentación ni plan. El artista produce en vivo, normalmente desde un loop de 8 compases hasta el arreglo, si el tiempo alcanza. Si una idea no funciona, vuelve a empezar. Si la audiencia pasa las seis horas preguntando, también vale.</p>
+      </article>
+      <article class="point" data-rise>
+        <h3 class="h3"><i class="dash"></i>What's next <span lang="es">Lo que viene</span></h3>
+        <p>MEKA runs the series and hosts this first volume. Future editions will invite producers from around the island to show their process, their techniques, or whatever software they use.</p>
+        <p class="es" lang="es">MEKA organiza la serie y presenta este primer volumen. Las próximas ediciones invitarán a productores de la isla a mostrar su proceso, sus técnicas o el programa que usen.</p>
+        <a class="link" href="#hot-seat">Host a session <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WATCH: pinned story. The monitor holds; the steps scroll past and swap the clip. ============ -->
+<section class="watch sec" id="watch" aria-labelledby="watch-title">
+  <div class="wrap">
+    <header class="sec-head watch__head" data-rise>
+      <h2 class="h2" id="watch-title">How a session&nbsp;works</h2>
+      <p class="h2-es" lang="es">Cómo funciona una sesión</p>
+      <p class="sec-intro">The clips are screen recordings from MEKA's own Ableton sessions. At a session it happens in the room, and you can stop the artist at any point.</p>
+      <p class="sec-intro es" lang="es">Los clips son grabaciones de pantalla de las sesiones de MEKA en Ableton. En una sesión pasa en el salón, y puede interrumpir al artista en cualquier momento.</p>
+    </header>
+
+    <div class="watch__body">
+      <div class="watch__stage">
+        <div class="monitor bz-host" data-bz data-label="Session clip" data-bottom="Ableton Live 12">
+          <div class="monitor__screen">
+            <video class="monitor__video" data-monitor playsinline muted loop preload="none" poster="/media/acid2.webp" width="1280" height="800"
+              aria-label="Screen recording of MEKA producing in Ableton Live 12"></video>
+          </div>
+          <div class="monitor__bar">
+            <button class="vbtn" type="button" data-mon-play aria-label="Pause clip"><svg class="ico"><use href="#i-pause"/></svg></button>
+            <button class="vbtn vbtn--wide" type="button" data-mon-sound aria-pressed="false"><svg class="ico"><use href="#i-mute"/></svg><span>Sound off</span></button>
+            <p class="monitor__now" aria-live="polite"><svg class="ico" aria-hidden="true"><use href="#i-play"/></svg><b data-mon-name>Acid layers</b> <span lang="es" data-mon-name-es>Capas de acid</span></p>
+            <p class="monitor__bpm lcd lcd--sm"><span data-mon-bpm>160</span><small>BPM</small></p>
+          </div>
+          <div class="monitor__seg" role="group" aria-label="Clips">
+            <button type="button" data-seg="0" aria-label="Clip 1: Acid layers" aria-current="true"><i></i></button>
+            <button type="button" data-seg="1" aria-label="Clip 2: Acid line"><i></i></button>
+            <button type="button" data-seg="2" aria-label="Clip 3: Melody"><i></i></button>
+            <button type="button" data-seg="3" aria-label="Clip 4: Lead melody"><i></i></button>
+            <button type="button" data-seg="4" aria-label="Clip 5: Stacked leads"><i></i></button>
+          </div>
+        </div>
+      </div>
+
+      <ol class="watch__steps">
+        <li class="step" data-step="0" data-clip="acid2" data-name="Acid layers" data-name-es="Capas de acid" data-bpm="160">
+          <h3 class="step__title">Learn the process</h3>
+          <p class="step__es" lang="es">Aprenda el proceso</p>
+          <p class="step__text">See every move, from the first sound to the arrangement. Nothing gets cut out.</p>
+          <p class="step__text es" lang="es">Vea cada paso, desde el primer sonido hasta el arreglo. No se corta nada.</p>
+        </li>
+        <li class="step" data-step="1" data-clip="acid" data-name="Acid line" data-name-es="Línea acid" data-bpm="160">
+          <h3 class="step__title">Ask questions</h3>
+          <p class="step__es" lang="es">Haga preguntas</p>
+          <p class="step__text">Stop the artist and ask what they just did, or why. That's what they're there for.</p>
+          <p class="step__text es" lang="es">Interrumpa al artista y pregúntele qué acaba de hacer, o por qué. Para eso está ahí.</p>
+        </li>
+        <li class="step" data-step="2" data-clip="melody1" data-name="Melody" data-name-es="Melodía" data-bpm="170">
+          <h3 class="step__title">Make suggestions</h3>
+          <p class="step__es" lang="es">Haga sugerencias</p>
+          <p class="step__text">Got an idea for the track? Say it out loud. If it doesn't work, they can start over.</p>
+          <p class="step__text es" lang="es">¿Tiene una idea para el tema? Dígala. Si no funciona, se vuelve a empezar.</p>
+        </li>
+        <li class="step" data-step="3" data-clip="melody2" data-name="Lead melody" data-name-es="Melodía principal" data-bpm="170">
+          <h3 class="step__title">Share what you know</h3>
+          <p class="step__es" lang="es">Comparta lo que sabe</p>
+          <p class="step__text">Bring a laptop and follow along, or show the room how you'd do it. You'll meet other producers.</p>
+          <p class="step__text es" lang="es">Traiga su laptop y siga el proceso, o muestre cómo lo haría usted. Va a conocer a otros productores.</p>
+        </li>
+        <li class="step" data-step="4" data-clip="melody3" data-name="Stacked leads" data-name-es="Melodías en capas" data-bpm="160">
+          <h3 class="step__title">No question is too&nbsp;basic</h3>
+          <p class="step__es" lang="es">Ninguna pregunta es demasiado básica</p>
+          <p class="step__text">Ask anything, any time. Sitting and watching in silence is welcome too.</p>
+          <p class="step__text es" lang="es">Pregunte cualquier cosa en cualquier momento. También es posible observar en silencio.</p>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUESTIONS: the questions as the monument ============ -->
+<section class="asks" id="questions" aria-labelledby="asks-title">
+  <div class="asks__rows" aria-hidden="true">
+    <p class="asks__row" data-drift="-1"><span>What did you just do?</span><span class="o" lang="es">¿Qué acaba de hacer?</span><span>What did you just do?</span><span class="o" lang="es">¿Qué acaba de hacer?</span></p>
+    <p class="asks__row" data-drift="1"><span class="o">Why?</span><span>¿Por qué?</span><span class="o">How?</span><span>¿Cómo?</span><span class="o">Why?</span><span>¿Por qué?</span><span class="o">How?</span><span>¿Cómo?</span></p>
+    <p class="asks__row" data-drift="-1"><span>Ask anything</span><span class="o" lang="es">Pregunte lo que quiera</span><span>Ask anything</span><span class="o" lang="es">Pregunte lo que quiera</span></p>
+  </div>
+  <div class="wrap asks__copy">
+    <h2 class="h2" id="asks-title" data-rise>Your questions run the&nbsp;session</h2>
+    <p class="h2-es" lang="es" data-rise>Las preguntas de la audiencia guían la sesión</p>
+    <div class="asks__text" data-rise>
+      <p>There's no lesson plan and no narration. Explanations happen when someone asks, so what gets covered is up to the audience. Ask anything, any time; none are too basic.</p>
+      <p class="es" lang="es">No hay un plan de clase fijo ni explicaciones programadas. Todo lo que se explica parte de las preguntas de la audiencia. Se puede preguntar cualquier cosa en cualquier momento; ninguna pregunta es demasiado básica.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VOLUMES: rendered from volumes.config.ts ============ -->
+<section class="volumes sec" id="volumes" aria-labelledby="volumes-title">
+  <div class="wrap">
+    <header class="sec-head" data-rise>
+      <h2 class="h2" id="volumes-title">Volumes</h2>
+      <p class="h2-es" lang="es">Volúmenes</p>
+      <p class="sec-intro">Each volume is one producer, one empty project and six hours. MEKA hosts the first one.</p>
+      <p class="sec-intro es" lang="es">Cada volumen es un productor, un proyecto en blanco y seis horas. MEKA presenta el primero.</p>
+    </header>
+    <!--VOLUMES-->
+  </div>
+</section>
+
+<!-- ============ HOT SEAT: producers wanted (future volumes) ============ -->
+<section class="seat" id="hot-seat" aria-labelledby="seat-title">
+  <p class="seat__mark" aria-hidden="true"><span>Producers wanted</span><span class="o" lang="es">Se buscan productores</span></p>
+  <div class="wrap seat__grid">
+    <div data-rise>
+      <h2 class="h2 h2--xl" id="seat-title">Want the hot&nbsp;seat?</h2>
+      <p class="h2-es" lang="es">¿Le interesa presentar en una próxima edición?</p>
+    </div>
+    <div class="seat__copy" data-rise>
+      <p>Future editions will invite producers from around the island to show their process, their techniques, or whatever software they use. If you want to open an empty project in front of the room, send us a message.</p>
+      <p class="es" lang="es">Las próximas ediciones invitarán a productores de la isla a mostrar su proceso, sus técnicas o el programa que usen. Si quiere abrir un proyecto en blanco frente a la audiencia, escríbanos.</p>
+      <a class="btn btn--ink btn--lg" href="{{INSTAGRAM_URL}}" rel="noopener" target="_blank">Message us on Instagram <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VOL. #001: the featured volume, all its details from here down ============ -->
+<section class="vol sec" id="vol-001" aria-labelledby="vol-title">
+  <div class="wrap">
+    <header class="vol__head" data-rise>
+      <h2 class="vol__title" id="vol-title">Vol. <span class="red">#001</span></h2>
+      <p class="vol__host">Hosted by MEKA <span lang="es">Presentado por MEKA</span></p>
+    </header>
+    <div class="vol__intro" data-rise>
+      <p class="statement">MEKA opens an empty project and makes a hard trance track in Ableton Live&nbsp;12, live for six hours. Come by, watch, and ask anything.</p>
+      <p class="statement-es" lang="es">MEKA abre un proyecto en blanco y produce un tema de hard trance en Ableton Live&nbsp;12, en vivo durante seis horas. Pase, observe y pregunte lo que quiera.</p>
+      <dl class="vol__facts">
+        <div><dt>When <span lang="es">Cuándo</span></dt><dd>Thu Nov 5, 4-10 PM <span lang="es">Jue 5 nov, 4-10 PM</span></dd></div>
+        <div><dt>Where <span lang="es">Dónde</span></dt><dd>Shipwreck Studios, 202 C. San Agustín, San Juan</dd></div>
+        <div><dt>Session <span lang="es">Sesión</span></dt><dd>Hard trance, Ableton Live 12</dd></div>
+      </dl>
+    </div>
+
+    <!-- the live thing: the six hours drawn as an Ableton arrangement, playhead at Puerto Rico time -->
+    <figure class="arr bz-host" data-bz data-label="Vol. #001 / Thu Nov 5" data-bottom="4-10 PM AST" data-rise>
+      <figcaption class="vh">The session as a timeline from 4 PM to 10 PM, with a playhead at the current time in Puerto Rico.</figcaption>
+      <div class="arr__top">
+        <div class="lcd arr__lcd" role="timer" aria-live="off">
+          <span class="lcd__label" data-clock="label">Starts in</span>
+          <span class="lcd__value" data-clock="value">--:--:--</span>
+        </div>
+        <p class="arr__status" data-clock="status">Doors at 4 PM. Stay as long as you want.</p>
+        <p class="arr__meta"><span>Ableton Live 12</span><span>Hard trance</span></p>
+      </div>
+      <div class="arr__grid" aria-hidden="true">
+        <div class="arr__ruler">
+          <span>4 PM</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10 PM</span>
+        </div>
+        <div class="arr__track">
+          <span class="arr__name">MEKA</span>
+          <div class="arr__lane">
+            <div class="clip clip--red">
+              <span class="clip__head">Empty project <i></i> hard trance</span>
+              <svg class="clip__body" data-notes preserveAspectRatio="none"></svg>
+              <span class="clip__scratch">Nothing here yet</span>
+            </div>
+          </div>
+        </div>
+        <div class="arr__track">
+          <span class="arr__name">You</span>
+          <div class="arr__lane">
+            <div class="clip clip--grey">
+              <span class="clip__head">Come and go anytime <i></i> <span lang="es">Entre y salga cuando guste</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="arr__track">
+          <span class="arr__name">Questions</span>
+          <div class="arr__lane arr__lane--q">
+            <span class="q">?</span><span class="q">?</span><span class="q">?</span><span class="q">?</span><span class="q">?</span><span class="q">?</span><span class="q">?</span><span class="q">?</span><span class="q">?</span><span class="q">?</span><span class="q">?</span><span class="q">?</span>
+          </div>
+        </div>
+        <div class="arr__playhead" data-playhead><i></i></div>
+      </div>
+    </figure>
+
+    <div class="session__cols">
+      <div class="session__text">
+        <article class="point" data-rise>
+          <h3 class="h3"><i class="dash"></i>This first one <span lang="es">Esta primera</span></h3>
+          <p>MEKA runs the series and goes first: a hard trance track in Ableton Live 12, Thursday from 4 to 10 PM. Come and go anytime and stay as long as you want.</p>
+          <p class="es" lang="es">MEKA organiza la serie y empieza: un tema de hard trance en Ableton Live 12, el jueves de 4 a 10 PM. Entre y salga cuando guste y quédese el tiempo que quiera.</p>
+        </article>
+        <article class="point" data-rise>
+          <h3 class="h3"><i class="dash"></i>RSVP and get 3 free devices <span lang="es">Confirme y reciba 3 dispositivos</span></h3>
+          <p>Everyone who RSVPs for Vol. #001 gets FS Pump, FS Clip and FS EQ, three Max for Live devices MEKA built himself.</p>
+          <p class="es" lang="es">Todos los que confirmen su asistencia al Vol. #001 reciben FS Pump, FS Clip y FS EQ, tres dispositivos de Max for Live que MEKA hizo él mismo.</p>
+          <a class="btn btn--red btn--lg vol__rsvp" href="{{RSVP_URL}}">RSVP Vol. #001 <span class="btn__sub" lang="es">Confirme</span></a>
+        </article>
+      </div>
+
+      <figure class="reel" data-rise>
+        <div class="reel__frame bz-host" data-bz data-label="Reel" data-bottom="0:59">
+          <video class="reel__video" data-reel playsinline loop muted preload="none" poster="/media/reel.webp" width="720" height="900"
+            aria-label="Promo reel for FROM SCRATCH Vol. #001: Ableton session clips of MEKA producing, with the date and place.">
+            <source data-src="/media/reel.mp4" type="video/mp4">
+          </video>
+          <div class="vctl">
+            <button class="vbtn" type="button" data-reel-play aria-label="Pause reel"><svg class="ico"><use href="#i-pause"/></svg></button>
+            <button class="vbtn vbtn--wide" type="button" data-reel-sound aria-pressed="false"><svg class="ico"><use href="#i-mute"/></svg><span>Sound off</span></button>
+          </div>
+        </div>
+        <figcaption class="cap"><svg class="ico" aria-hidden="true"><use href="#i-play"/></svg> Now playing <b>MEKA, The Alchemist</b></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEVICES: the RSVP gift ============ -->
+<section class="devices sec" id="devices" aria-labelledby="devices-title">
+  <div class="wrap">
+    <header class="devices__head">
+      <div class="devices__logo chrome chrome--sweep" data-rise aria-hidden="true">
+        <picture><source srcset="/img/fs-chrome-800.avif 800w, /img/fs-chrome-1600.avif 1600w" sizes="(min-width: 900px) 40vw, 86vw" type="image/avif"><img src="/img/fs-chrome-1600.webp" srcset="/img/fs-chrome-800.webp 800w, /img/fs-chrome-1600.webp 1600w" sizes="(min-width: 900px) 40vw, 86vw" width="1600" height="899" alt="" loading="lazy" decoding="async"></picture>
+      </div>
+      <div class="devices__title" data-rise>
+        <h2 class="h2 h2--xl" id="devices-title"><span class="red">3 free</span> Max for Live devices</h2>
+        <p class="h2-es" lang="es">3 dispositivos de Max for Live gratis</p>
+        <p class="sec-intro">Everyone who RSVPs for Vol. #001 gets the From Scratch Edition: three devices MEKA built himself. He uses them live during the session, so you can watch them work and ask how he uses them.</p>
+        <p class="sec-intro es" lang="es">Todos los que confirmen su asistencia al Vol. #001 reciben la From Scratch Edition: tres dispositivos que MEKA hizo él mismo. Los usa en vivo durante la sesión, así que puede verlos en acción y preguntarle cómo los usa.</p>
+        <a class="btn btn--red btn--lg" href="{{RSVP_URL}}">RSVP for the download <span class="btn__sub" lang="es">Confirme</span></a>
+      </div>
+    </header>
+
+    <article class="dev" id="fs-pump" aria-labelledby="pump-title">
+      <div class="dev__head" data-rise>
+        <h3 class="dev__name" id="pump-title">FS Pump</h3>
+        <p class="dev__kind"><i class="dash"></i>Volume shaper <span lang="es">Modelador de volumen</span></p>
+      </div>
+      <div class="dev__shot" data-rise data-loupe>
+        <picture><source srcset="/img/fs-pump-1300.avif 1300w, /img/fs-pump-2552.avif 2552w" sizes="(min-width: 1200px) 1100px, 100vw" type="image/avif"><img src="/img/fs-pump-2552.webp" srcset="/img/fs-pump-1300.webp 1300w, /img/fs-pump-2552.webp 2552w" sizes="(min-width: 1200px) 1100px, 100vw" width="2552" height="740" loading="lazy" decoding="async" alt="FS PUMP device: a volume curve drawn over the waveform, with Low, High and Trig tabs, Rate 1/4, Grid 1/16, Sync or Trig mode, Single or Split bands, and Threshold, Depth, Crossover and Smooth knobs."></picture>
+      </div>
+      <div class="dev__copy" data-rise>
+        <p class="dev__lede">Draw the duck right on the device, then <b>sync it to the beat</b> or let your kick trigger it.</p>
+        <p class="dev__lede es" lang="es">Dibuje la curva en el mismo dispositivo y <b>sincronícela al tempo</b>, o deje que el kick la dispare.</p>
+        <ul class="feats">
+          <li><b>Split</b> Separate curves for the lows and the highs. <span lang="es">Curvas separadas para los graves y los agudos.</span></li>
+          <li><b>Edge fades</b> Drag an end point sideways to smooth out the click. <span lang="es">Arrastre un extremo hacia el lado para suavizar el clic.</span></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="dev" id="fs-clip" aria-labelledby="clip-title">
+      <div class="dev__head" data-rise>
+        <h3 class="dev__name" id="clip-title">FS Clip</h3>
+        <p class="dev__kind"><i class="dash"></i>Oversampled clipper <span lang="es">Clipper con sobremuestreo</span></p>
+      </div>
+      <div class="dev__shot" data-rise data-loupe>
+        <picture><source srcset="/img/fs-clip-1300.avif 1300w, /img/fs-clip-2440.avif 2440w" sizes="(min-width: 1200px) 1100px, 100vw" type="image/avif"><img src="/img/fs-clip-2440.webp" srcset="/img/fs-clip-1300.webp 1300w, /img/fs-clip-2440.webp 2440w" sizes="(min-width: 1200px) 1100px, 100vw" width="2440" height="744" loading="lazy" decoding="async" alt="FS CLIP device with the new FOLD shape selected: a waveform with the folded peaks marked in red against a dashed ceiling line, long Drive and Ceiling faders, Hard, Smooth, Crisp, Tape and Fold shapes, 2x to 16x oversampling, and Matched and Listen buttons."></picture>
+      </div>
+      <div class="dev__copy" data-rise>
+        <p class="dev__lede">Push your drums harder and <b>see exactly which peaks get cut</b>. Five clip shapes, including the new <b>FOLD</b>, and 2x to 16x oversampling.</p>
+        <p class="dev__lede es" lang="es">Empuje más sus drums y <b>vea exactamente qué picos se recortan</b>. Cinco formas de clip, incluida la nueva <b>FOLD</b>, y sobremuestreo de 2x a 16x.</p>
+        <ul class="feats">
+          <li><b>Fold</b> New: instead of flattening the peaks, FOLD bends them back down under the ceiling. Push Drive for bright, metallic overtones. <span lang="es">Nuevo: en vez de aplanar los picos, FOLD los dobla de vuelta por debajo del Ceiling. Suba el Drive para lograr armónicos brillantes y metálicos.</span></li>
+          <li><b>Long faders</b> Long vertical faders for Drive and Ceiling, or type a value. <span lang="es">Faders verticales largos para Drive y Ceiling, o escriba el valor.</span></li>
+          <li><b>Matched</b> Drive shaves the peaks without making the track louder. <span lang="es">Drive recorta los picos sin subirle el volumen a la pista.</span></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="dev" id="fs-eq" aria-labelledby="eq-title">
+      <div class="dev__head" data-rise>
+        <h3 class="dev__name" id="eq-title">FS EQ</h3>
+        <p class="dev__kind"><i class="dash"></i>Air EQ <span lang="es">Ecualizador de aire</span></p>
+      </div>
+      <div class="dev__shot" data-rise data-loupe>
+        <picture><source srcset="/img/fs-eq-1600.avif 1600w, /img/fs-eq-3192.avif 3192w" sizes="(min-width: 1200px) 1100px, 100vw" type="image/avif"><img src="/img/fs-eq-3192.webp" srcset="/img/fs-eq-1600.webp 1600w, /img/fs-eq-3192.webp 3192w" sizes="(min-width: 1200px) 1100px, 100vw" width="3192" height="744" loading="lazy" decoding="async" alt="FS EQ device: a spectrum display with the EQ curve, five broad band knobs from Sub to 2.5 kHz plus an Air knob, a Level Matched readout and Stereo, Mid and Side scope."></picture>
+      </div>
+      <div class="dev__copy" data-rise>
+        <p class="dev__lede">Five broad bands and an <b>air shelf up to 40 kHz</b> to add weight and shine.</p>
+        <p class="dev__lede es" lang="es">Cinco bandas amplias y un <b>shelf de aire hasta 40 kHz</b> para dar peso y brillo.</p>
+        <ul class="feats">
+          <li><b>Match</b> Keeps the loudness level so you judge the tone, not the volume. <span lang="es">Mantiene el volumen parejo para que juzgue el tono.</span></li>
+          <li><b>Stereo / Mid / Side</b> EQ the whole mix, the center or the sides. <span lang="es">Ecualice toda la mezcla, el centro o los lados.</span></li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ HOW TO GET THEM: a real sequence, so it is numbered ============ -->
+<section class="get sec" id="get" aria-labelledby="get-title">
+  <div class="wrap">
+    <header class="sec-head" data-rise>
+      <h2 class="h2" id="get-title">How to get them</h2>
+      <p class="h2-es" lang="es">Cómo obtenerlos</p>
+    </header>
+    <ol class="get__steps">
+      <li class="get__step" data-rise>
+        <span class="lcd lcd--num" aria-hidden="true">01</span>
+        <h3 class="h3">RSVP <span lang="es">Confirme</span></h3>
+        <p>Sign up at <a class="inline" href="{{RSVP_URL}}">from-scratch.art</a> before <b>Thursday, Nov&nbsp;5 at 4&nbsp;PM</b>.</p>
+        <p class="es" lang="es">Regístrese en from-scratch.art antes del <b>jueves 5 de noviembre a las 4&nbsp;PM</b>.</p>
+      </li>
+      <li class="get__step" data-rise>
+        <span class="lcd lcd--num" aria-hidden="true">02</span>
+        <h3 class="h3">Download <span lang="es">Descargue</span></h3>
+        <p>You'll get the download link for <b>FS Pump, FS Clip and FS EQ</b>.</p>
+        <p class="es" lang="es">Recibirá el enlace para descargar <b>FS Pump, FS Clip y FS EQ</b>.</p>
+      </li>
+      <li class="get__step" data-rise>
+        <span class="lcd lcd--num" aria-hidden="true">03</span>
+        <h3 class="h3">Come by <span lang="es">Pase por aquí</span></h3>
+        <p>Watch MEKA use them live while he makes a track from scratch. Ask him anything.</p>
+        <p class="es" lang="es">Vea a MEKA usarlos en vivo mientras hace un tema desde cero. Pregúntele lo que quiera.</p>
+      </li>
+    </ol>
+    <div class="get__foot" data-rise>
+      <a class="btn btn--red btn--lg" href="{{RSVP_URL}}">RSVP now <span class="btn__sub" lang="es">Confirme ahora</span></a>
+      <p class="fine"><b>Needs Ableton Live 12 Suite</b>, or Live 12 Standard with Max for Live. <span lang="es">Requiere Ableton Live 12 Suite, o Live 12 Standard con Max for Live.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT MEKA ============ -->
+<section class="meka sec" id="meka" aria-labelledby="meka-title">
+  <div class="meka__art" aria-hidden="true" data-parallax="0.12">
+    <picture><source srcset="/img/mech-800.avif 800w, /img/mech-1400.avif 1400w" sizes="(min-width: 900px) 46vw, 90vw" type="image/avif"><img src="/img/mech-1400.webp" srcset="/img/mech-800.webp 800w, /img/mech-1400.webp 1400w" sizes="(min-width: 900px) 46vw, 90vw" width="1400" height="1330" alt="" loading="lazy" decoding="async"></picture>
+  </div>
+  <div class="wrap meka__grid">
+    <div class="meka__copy">
+      <header class="sec-head" data-rise>
+        <h2 class="h2" id="meka-title">About MEKA</h2>
+        <p class="h2-es" lang="es">Sobre MEKA</p>
+        <p class="meka__role">Host of Vol. #001 and organiser of the series. <span lang="es">Presenta el Vol. #001 y organiza la serie.</span></p>
+      </header>
+      <div data-rise>
+        <p class="meka__bio">California-born producer of high-BPM music rooted in trance, hardcore, psytrance and techno, based in San Juan. Out on <b>Hardestsoft</b> (Berlin), <b>Strawberry Gothcake</b> (Montréal) and <b>UNDER.NET</b>. Founding member of <b>Shadow Command</b> (inactive). Current member of <b>Mindless Entertainment</b>.</p>
+        <p class="meka__bio es" lang="es">Productor de música de alto BPM, nacido en California y radicado en San Juan, con influencias de trance, hardcore, psytrance y techno. Ha publicado música con los sellos <b>Hardestsoft</b> (Berlín), <b>Strawberry Gothcake</b> (Montreal) y <b>UNDER.NET</b>. Miembro fundador de <b>Shadow Command</b> (inactivo). Miembro actual de <b>Mindless Entertainment</b>.</p>
+      </div>
+      <dl class="stats" data-rise>
+        <div><dt>Streams</dt><dd class="lcd-num">1.4M+</dd></div>
+        <div><dt>Releases <span lang="es">Lanzamientos</span></dt><dd class="lcd-num">130+</dd></div>
+        <div><dt>Years producing <span lang="es">Años de carrera</span></dt><dd class="lcd-num">4</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VISIT: the address in display rows ============ -->
+<section class="visit sec" id="visit" aria-labelledby="visit-title">
+  <div class="wrap">
+    <header class="sec-head" data-rise>
+      <h2 class="h2" id="visit-title">Vol. #001: where and&nbsp;when</h2>
+      <p class="h2-es" lang="es">Vol. #001: dónde y cuándo</p>
+    </header>
+  </div>
+  <address class="rows">
+    <a class="row row--venue" href="{{MAPS_URL}}" target="_blank" rel="noopener" data-rise>
+      <span class="row__big">Shipwreck Studios</span><span class="row__aside">Open in Maps <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+    </a>
+    <a class="row" href="{{MAPS_URL}}" target="_blank" rel="noopener" data-rise>
+      <span class="row__big">202 C. San Agustín</span><span class="row__aside">San Juan, PR 00901</span>
+    </a>
+    <a class="row row--time" href="/from-scratch-vol-001.ics" download data-rise>
+      <span class="row__big"><span class="px">Thu Nov 5</span> <i class="when__sep" aria-hidden="true"></i> <span class="px">4-10 PM</span></span><span class="row__aside">Add to calendar <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+    </a>
+    <p class="row row--plain" data-rise>
+      <span class="row__big">Come and go anytime</span><span class="row__aside" lang="es">Entre y salga cuando guste</span>
+    </p>
+    <a class="row row--red" href="{{RSVP_URL}}" data-rise>
+      <span class="row__big">RSVP</span><span class="row__aside">Get the 3 free devices <span lang="es">Reciba los 3 dispositivos</span> <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+    </a>
+  </address>
+</section>
+
+</main>
+
+<!-- ============ FOOTER: the name returns at full width ============ -->
+<footer class="foot">
+  <div class="wrap foot__cols">
+    <div>
+      <p class="foot__h">FROM SCRATCH</p>
+      <p>Open production sessions.</p>
+      <p lang="es">Sesiones de producción abiertas.</p>
+      <a href="#hot-seat">Host a session</a>
+    </div>
+    <div>
+      <p class="foot__h">Next: Vol. #001</p>
+      <p>Thu Nov 5, 2026, 4-10 PM</p>
+      <p>Shipwreck Studios</p>
+      <p>202 C. San Agustín, San Juan</p>
+      <p>Hosted by MEKA</p>
+    </div>
+    <nav aria-label="Footer">
+      <p class="foot__h">On this page</p>
+      <a href="#how">How it works</a>
+      <a href="#volumes">Volumes</a>
+      <a href="#vol-001">Vol. #001</a>
+      <a href="#devices">Free devices</a>
+      <a href="#visit">Where and when</a>
+    </nav>
+    <div>
+      <p class="foot__h">RSVP Vol. #001</p>
+      <p>Free. Three Max for Live devices for everyone who signs up.</p>
+      <a class="btn btn--red btn--sm" href="{{RSVP_URL}}">RSVP</a>
+      <a href="{{INSTAGRAM_URL}}" target="_blank" rel="noopener">Instagram</a>
+      <a href="/from-scratch-vol-001.ics" download>Add Vol. #001 to calendar</a>
+    </div>
+  </div>
+  <p class="foot__mark" aria-hidden="true"><span>From</span><span>Scratch</span></p>
+  <p class="foot__fine wrap">A community series of open production sessions, started by MEKA in San Juan, Puerto Rico. <span lang="es">Una serie comunitaria de sesiones de producción abiertas, iniciada por MEKA en San Juan, Puerto Rico.</span></p>
+</footer>
+
+</div>
+
+<a class="fcta btn btn--red" href="{{RSVP_URL}}" data-fcta tabindex="-1" aria-hidden="true">RSVP Vol. #001 <span class="btn__sub">+ 3 free devices</span></a>
+
+<div class="fx" aria-hidden="true"><div class="fx__tex"></div><div class="fx__lift"></div><div class="fx__grain"></div><div class="fx__scan"></div></div>
+
+<script type="module" src="/src/main.ts"></script>
+</body>
+</html>
