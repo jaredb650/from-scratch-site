@@ -7,7 +7,7 @@ export const SITE = {
   /** Where every "RSVP" button goes.
    *  TODO: point this at the RSVP system (ticketFoo) once it is deployed, e.g. "https://rsvp.from-scratch.art".
    *  While it is "/rsvp", the placeholder page in rsvp/index.html is served. */
-  RSVP_URL: "https://ticketfoo.vercel.app/s/from-scratch/e/from-scratch-001-meka",   // live ticketFoo event page (11-04); rsvp.from-scratch.art may replace it
+  RSVP_URL: "https://rsvp.from-scratch.art/e/from-scratch-001-meka",   // FROM SCRATCH store on ticketFoo (custom domain, 11-04)
   /** The series' Instagram (@frm_scrtch_), used for "want the hot seat?", the RSVP placeholder and the footer. */
   INSTAGRAM_URL: "https://www.instagram.com/frm_scrtch_/",
   SITE_URL: "https://from-scratch.art",
