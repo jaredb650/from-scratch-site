@@ -561,21 +561,20 @@ a, button { touch-action: manipulation; }
   .step:last-child { min-height: 64svh; }
 }
 @media (max-width: 899px) {
-  .watch__stage { position: sticky; top: calc(var(--bar) + env(safe-area-inset-top, 0px)); z-index: 3; margin-inline: calc(var(--gut) * -1); padding: 8px var(--gut) 0; background: var(--ink-2); }
-  /* compact sticky player on phones: small clip on the left, name + controls on the right (~190px tall, was ~360) */
-  .monitor { display: grid; grid-template-columns: minmax(0, 54%) minmax(0, 1fr); column-gap: 12px; align-items: center; padding: 26px 8px 22px; }
-  .monitor__screen { grid-column: 1; grid-row: 1; }
-  .monitor__bar { grid-column: 2; grid-row: 1; flex-wrap: wrap; gap: 8px; margin-top: 0; align-content: center; }
-  .monitor__now { order: -1; flex: 1 1 100%; padding-left: 0; white-space: normal; }
-  .monitor__seg { grid-column: 1 / -1; margin-top: 6px; }
-  .monitor__seg button { height: 18px; }
+  /* phones: the player sits in the page (not pinned over the text); the clip bar under it switches clips,
+     and the five steps follow as a plain list */
+  .watch__stage { margin-inline: calc(var(--gut) * -1); padding: 0 calc(var(--gut) - 8px); }
+  .monitor { padding: 30px 8px 32px; }
   .monitor__bar .vbtn--wide span { display: none; }
   .monitor__now [lang="es"] { display: none; }
   .monitor__bpm { display: none; }
-  .monitor__now b { letter-spacing: .1em; font-size: 12px; line-height: 1.25; }
-  .step { min-height: 62svh; padding-top: 32px; justify-content: flex-start; }
-  .step:last-child { min-height: 40svh; }
-  .step__title { font-size: 26px; }
+  .monitor__now b { letter-spacing: .1em; }
+  .monitor__seg { margin-top: 12px; }
+  .watch__steps { margin-top: 24px; }
+  .step { padding: 28px 0; justify-content: flex-start; }
+  .step + .step { box-shadow: 0 -1px 0 var(--line); }
+  .step .step__title { color: #fff; font-size: 26px; }
+  .step .step__title::before { background: var(--red-hi); }
 }
 
 /* =====================================================================

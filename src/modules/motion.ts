@@ -80,11 +80,11 @@ export function initScroll(onStep: (clip: string, i: number) => void) {
     onStep(s.dataset.clip || "acid2", i);
   };
   segs.forEach((b, k) => b.addEventListener("click", () => {
-    const s = steps[k];
-    const r = s.getBoundingClientRect();
-    // desktop: bring the step's centre to mid-screen; phone: its top just under the sticky monitor
-    const top = desktop.matches ? r.top + scrollY + r.height / 2 - innerHeight * 0.5 : r.top + scrollY - innerHeight * 0.5;
-    scrollTo({ top, behavior: reduced ? "auto" : "smooth" });
+    // phone: the player isn't pinned, so a tap just swaps the clip in place
+    if (!desktop.matches) { setStep(k); return; }
+    // desktop: bring the step's centre to mid-screen
+    const r = steps[k].getBoundingClientRect();
+    scrollTo({ top: r.top + scrollY + r.height / 2 - innerHeight * 0.5, behavior: reduced ? "auto" : "smooth" });
     setStep(k);
   }));
 
@@ -93,11 +93,13 @@ export function initScroll(onStep: (clip: string, i: number) => void) {
     ticking = false;
     const vh = innerHeight;
 
-    // pinned story. Desktop steps centre their text in a tall box, so switch when the centre passes 60%;
-    // phone steps are top-aligned under the sticky monitor, so switch when the top passes 60%.
-    let next = 0;
-    steps.forEach((s, k) => { const r = s.getBoundingClientRect(); if ((desktop.matches ? r.top + r.height / 2 : r.top) < vh * 0.6) next = k; });
-    setStep(next);
+    // pinned story (desktop only): steps centre their text in a tall box, so switch when the centre passes 60%.
+    // Phones show the player in the page and switch clips from the clip bar only.
+    if (desktop.matches) {
+      let next = 0;
+      steps.forEach((s, k) => { const r = s.getBoundingClientRect(); if (r.top + r.height / 2 < vh * 0.6) next = k; });
+      setStep(next);
+    } else if (active < 0) setStep(0);
 
     // floating RSVP: after the hero, out of the way of the other RSVP buttons
     if (fcta && hero) {
